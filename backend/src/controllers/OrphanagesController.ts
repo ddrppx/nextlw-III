@@ -9,6 +9,15 @@ export default {
         const orphanages = await orphanagesRepository.find()
         return response.json(orphanages);
     },
+    
+    async show(request: Request, response: Response){
+        const { id } = request.params;
+
+        const orphanagesRepository = getRepository(Orphanage);
+
+        const orphanages = await orphanagesRepository.findOneOrFail(id);
+        return response.json(orphanages);
+    },
 
     async create(request: Request, response: Response) {
         const {
