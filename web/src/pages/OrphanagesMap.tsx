@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import mapMarkerImg from '../images/map-marker.svg';
 import { Link } from 'react-router-dom';
 import { FiPlus, FiArrowRight } from 'react-icons/fi';
@@ -10,6 +10,7 @@ import 'leaflet/dist/leaflet.css';
 import mapIcon from '../utils/mapIcon';
 
 function OrphanagesMap(){
+
     return (
         <div id="page-map">
             <aside>
