@@ -13,7 +13,7 @@ const mapIcon = Leaflet.icon({
     iconSize: [58,68],
     iconAnchor: [29,68],
     popupAnchor: [170, 2]
-})
+});
 
 function OrphanagesMap(){
     return (
@@ -42,14 +42,14 @@ function OrphanagesMap(){
             > 
                 <Popup closeButton={false} minWidth={240} maxWidth={240} className="map-popup">
                     Lar das meninas
-                    <a href="">
+                    <Link to="/orphanages/1">
                         <FiArrowRight size={20} color="#FFF" />
-                    </a>
+                    </Link>
                 </Popup>
             </Marker>
             </Map>
 
-            <Link to="" className="create-orphanage">
+            <Link to="/orphanages/create" className="create-orphanage">
                 <FiPlus size={32} color="#FFF"/>
             </Link>
         </div>
