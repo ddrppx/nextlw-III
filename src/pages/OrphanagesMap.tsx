@@ -5,9 +5,16 @@ import { Feather } from '@expo/vector-icons';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import mapMarker from '../images/map-marker.png';
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function OrphanagesMap() {
+    const navigation = useNavigation();
+
+    function handleNavigateToOrphanageDetails() {
+        navigation.navigate('OrphanageDetails')
+    }
+
     return(
         <View style={styles.container}>
       <MapView 
@@ -23,14 +30,14 @@ export default function OrphanagesMap() {
         <Marker 
         icon={mapMarker} 
         calloutAnchor={{
-          x: 2.7,
-          y: 0.8,
+          x: 2.1,
+          y: 0.7,
         }}
         coordinate={{
           latitude: -21.0302507,
           longitude: -40.8159322, 
         }}>
-          <Callout tooltip onPress={() => {}} >
+          <Callout tooltip onPress={handleNavigateToOrphanageDetails} >
             <View style={styles.calloutContainer}>
               <Text style={styles.calloutText}>Lar das meninas</Text>
             </View>
