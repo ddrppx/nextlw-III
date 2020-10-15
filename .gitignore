@@ -1,4 +1,7 @@
-node_modules/**/*
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+./node_modules
 .expo/*
 npm-debug.*
 *.jks
@@ -11,3 +14,4 @@ web-build/
 
 # macOS
 .DS_Store
+node_modules
