@@ -3,6 +3,8 @@ import React from 'react';
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
+import mapMarker from './src/images/mao-marker.png';
+
 export default function App() {
   return (
     <View style={styles.container}>
